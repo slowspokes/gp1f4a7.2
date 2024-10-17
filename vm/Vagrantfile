@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   #CONFIGURACIONS
   config.vm.network "forwarded_port", guest: 80, host: 8000
   config.vm.network "forwarded_port", guest: 443, host: 8443
-  config.vm.network "public_network", use_dhcp_assigned_default_route: true
+  config.vm.network "public_network"#adaptador pont
   config.vm.synced_folder "../codi/", "/var/www/html"   
   # SHELL
   config.vm.provision "shell", inline: <<-SHELL
